@@ -1,58 +1,112 @@
-# HR Analytics Dashboard | Power BI
+# HR Analytics and Employee Attrition Analysis Dashboard
 
-An interactive **HR Analytics Dashboard** developed using Microsoft Power BI to analyze employee data, workforce trends, employee attrition, performance, compensation, satisfaction, and career development.
+An interactive HR Analytics project developed using **Python and Microsoft Power BI** to analyze employee data, identify attrition patterns, and understand workforce trends through data visualization.
 
 ## Project Overview
 
-This project transforms HR data into meaningful insights through interactive dashboards and visualizations. It helps understand employee demographics, attrition patterns, salary distribution, job satisfaction, and workforce trends.
+This project uses the IBM HR Analytics Employee Attrition dataset, containing **1,470 employee records and 35 attributes**.
+
+Python is used for dataset loading, inspection, preprocessing, and Exploratory Data Analysis (EDA). Microsoft Power BI is used for data transformation, DAX-based KPI calculations, and interactive dashboard development.
+
+The project consists of five dashboard pages that provide insights into employee demographics, attrition, salary, performance, satisfaction, and career development.
+
+## Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Data analysis and preprocessing |
+| Pandas | Data manipulation |
+| NumPy | Numerical operations |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
+| Microsoft Power BI | Interactive dashboards |
+| Power Query | Data cleaning and transformation |
+| DAX | KPI calculations and measures |
+
+## Dataset Information
+
+- **Dataset:** IBM HR Analytics Employee Attrition
+- **Total Records:** 1,470
+- **Total Attributes:** 35
+- **Target Column:** Attrition
+
+The dataset contains employee information related to demographics, department, job role, salary, performance, satisfaction, work-life balance, and attrition.
+
+## Project Workflow
+
+1. Dataset collection and understanding.
+2. Dataset loading using Python.
+3. Data inspection and preprocessing.
+4. Exploratory Data Analysis using Python.
+5. Data cleaning and transformation using Power Query.
+6. KPI calculation using DAX.
+7. Development of interactive Power BI dashboards.
+8. Dashboard testing and validation.
 
 ## Dashboard Pages
 
-### 1. Overview
+### 1. Overview Dashboard
+
+Provides a summary of employee information through KPI cards and visualizations.
+
 - Total Employees
 - Employees Left
 - Attrition Rate
 - Average Salary
 - Average Age
 - Average Tenure
-- Employee distribution by department, gender, education, age group, job role, and marital status.
+- Employee distribution by department, gender, education field, age group, job role, and marital status.
 
-### 2. Attrition Analysis
-- Employee attrition by department
-- Attrition by gender and education
-- Attrition by age group
-- Attrition by job role
-- Attrition by marital status
+### 2. Attrition Analysis Dashboard
 
-### 3. Performance and Compensation
-- Average salary by department
-- Salary by job role
-- Performance rating by job role
-- Average salary hike
-- Employee attrition by department and job role
-- Average tenure by department
+Analyzes employee departures across different categories.
 
-### 4. Workforce and Employee Insights
-- Employee distribution by age group
-- Gender distribution
-- Marital status distribution
-- Overtime vs. attrition
-- Work-life balance by department
-- Business travel analysis
+- Attrition by Department
+- Attrition by Gender
+- Attrition by Education Field
+- Attrition by Age Group
+- Attrition by Job Role
+- Attrition by Marital Status
 
-### 5. Career Growth and Employee Development
-- Relationship satisfaction
-- Job satisfaction
-- Environment satisfaction
-- Work-life balance
-- Employees working overtime
-- Training sessions
-- Years since last promotion
-- Employee tenure analysis
+### 3. Performance and Compensation Dashboard
 
-## Key Performance Indicators
+Focuses on employee salary and performance.
 
-| KPI | Value |
+- Average Salary
+- Average Salary Hike
+- Average Performance Rating
+- Average Job Satisfaction
+- Salary by Department and Job Role
+- Employee departures by Department and Job Role
+- Average Tenure by Department
+
+### 4. Workforce and Employee Insights Dashboard
+
+Explores employee demographics and workplace conditions.
+
+- Employee distribution by Age Group
+- Gender Distribution
+- Marital Status Distribution
+- Overtime and Attrition
+- Average Work-Life Balance by Department
+- Employees by Business Travel
+
+### 5. Career Growth and Employee Development Dashboard
+
+Analyzes employee development and satisfaction.
+
+- Average Relationship Satisfaction
+- Average Job Satisfaction
+- Average Environment Satisfaction
+- Average Work-Life Balance
+- Employees Working Overtime
+- Average Training Sessions
+- Employee Tenure Groups
+- Years Since Last Promotion
+
+## Key Performance Indicators (KPIs)
+
+| KPI | Result |
 |---|---:|
 | Total Employees | 1,470 |
 | Employees Left | 237 |
@@ -65,75 +119,81 @@ This project transforms HR data into meaningful insights through interactive das
 | Average Performance Rating | 3.15 |
 | Average Salary Hike | 15.21 |
 
-## Tools and Technologies
-
-- Microsoft Power BI Desktop
-- Power Query
-- DAX (Data Analysis Expressions)
-- Data Visualization
-- Data Cleaning and Transformation
-
-## Dataset
-
-The project uses the IBM HR Analytics Employee Attrition dataset.
-
-The dataset contains employee information such as:
-- Age and gender
-- Department and job role
-- Monthly income
-- Years at company
-- Job satisfaction
-- Performance rating
-- Attrition status
-
-## Project Structure
+## Repository Structure
 
 ```text
-HR-Analytics-PowerBI-Dashboard/
+HR-Analytics-Employee-Attrition-Dashboard/
 │
-├── Dashboard/
-│   └── HR ANALYSIS.pbix
+├── Python/
+│   └── HR_Analytics_EDA.ipynb
+│
+├── PowerBI/
+│   └── HR_ANALYSIS.pbix
 │
 ├── Dataset/
-│   └── HR_Analytics_Final.csv
+│   └── README.md
 │
 ├── Screenshots/
-│   ├── overview.png
-│   ├── attrition-analysis.png
-│   ├── performance-compensation.png
-│   ├── workforce-insights.png
-│   └── career-development.png
+│   ├── Overview_Dashboard.png
+│   ├── Attrition_Analysis.png
+│   ├── Performance_Compensation.png
+│   ├── Workforce_Insights.png
+│   └── Career_Growth.png
 │
 ├── Documentation/
-│   └── Project-Report.pdf
+│   └── HR_Analytics_Project_Report.pdf
 │
-└── README.md
+├── README.md
+└── LICENSE
 ```
 
-## How to Use
+## How to Run the Project
+
+### Python Analysis
 
 1. Clone or download this repository.
-2. Open the `Dashboard` folder.
-3. Download `HR ANALYSIS.pbix`.
-4. Open the file using Microsoft Power BI Desktop.
-5. Explore all five dashboard pages and interact with the available filters and visuals.
+2. Open the `Python` folder.
+3. Open the Jupyter Notebook in Jupyter Notebook or Google Colab.
+4. Download the dataset from the source mentioned in the Dataset folder.
+5. Update the dataset file path if required.
+6. Run the notebook cells to perform data analysis.
 
-## Project Objectives
+### Power BI Dashboard
 
-- Analyze employee attrition trends.
-- Understand workforce demographics.
-- Evaluate employee performance and compensation.
-- Study job satisfaction and work-life balance.
-- Identify areas for employee retention and career development.
+1. Install Microsoft Power BI Desktop.
+2. Open the `HR_ANALYSIS.pbix` file from the `PowerBI` folder.
+3. If required, update the dataset source path.
+4. Refresh the data.
+5. Explore all five dashboard pages using interactive slicers and filters.
+
+## Key Results
+
+- Analyzed 1,470 employee records.
+- Identified 237 employees who left the organization.
+- Calculated an overall attrition rate of 16.12%.
+- Examined workforce distribution across departments and job roles.
+- Analyzed salary, performance, and employee satisfaction.
+- Developed five interactive Power BI dashboard pages.
+
+## Future Scope
+
+- Implement machine learning models for employee attrition prediction.
+- Integrate regularly updated HR datasets.
+- Add more advanced HR analytics and visualizations.
+- Develop automated HR reporting.
+- Explore cloud-based dashboard hosting.
 
 ## Author
 
-**Riya Sunil Kharade**
+**Riya Kharade**
 
-- GitHub: https://github.com/Riya-Kharade
-- Portfolio: https://riyakharade-portfolio.netlify.app/
+- GitHub: [Riya-Kharade](https://github.com/Riya-Kharade)
+- Portfolio: [Visit Portfolio](https://riyakharade-portfolio.netlify.app/)
 
 ---
 
-If you find this project useful, consider giving this repository a ⭐.
+**Project Domain:** Data Analytics | HR Analytics | Business Intelligence
 
+**Tools:** Python | Microsoft Power BI
+
+*Developed as an academic project.*
